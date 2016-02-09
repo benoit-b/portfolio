@@ -9,20 +9,36 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Benoît Bouchère - Portfolio</title>
+    <title>Portfolio - Benoît Bouchère</title>
 
-    <link rel="icon" type="image/png" href="img/logob2.png" />
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">!-->
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Resource style -->
+    <link href="css/animated-headline.css" rel="stylesheet"> 
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Animation Loader CSS -->
+    <link rel="stylesheet" href="css/fakeLoader.css">
+
+    <!-- Animation cercle CSS 
+    <link href="css/circle.css" rel="stylesheet" >-->
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,6 +51,17 @@
 
 <body id="page-top" class="index">
 
+    <!-- Preloader -->
+
+    <div id="preloader">
+        <div class="row" style="margin-top: 450px;">
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading" style="color: #3498DB;">CHARGEMENT</h2>
+                    <div id="status"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -46,23 +73,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
-                <!-- <a class="navbar-brand" href="#page-top"></a><img class="img-responsive" src="img/logob2.png" alt=""> -->
-
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/benoit.bouchere" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/+Beno%C3%AEtBouch%C3%A8re1" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/BenoitBche" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href=" http://fr.linkedin.com/in/benoitbouchere/" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                <a class="navbar-brand page-scroll" href="#page-top">Benoît Bouchère</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,15 +82,25 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Créations</a>
+                    
+                    <li>
+                        <a class="page-scroll" href="#team">Qui suis-je ?</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#about">À propos</a>
+                    <li>
+                        <a class="page-scroll" href="#about">Mon parcours</a>
                     </li>
-                    <!-- <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li> -->
+                    <!--<li>
+                        <a class="page-scroll" href="#services">Mes compétences</a>
+                    </li>!-->
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Mes créations</a>
+                    </li>
+                    <!--!--><li>
+                        <a class="page-scroll" href="#contact2">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mention">Mentions légales</a>
+                    </li>     
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -90,256 +111,471 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/logob.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Benoît Bouchère</span>
-                        <hr class="star-light">
-                        <span class="skills">Etudiant en Licence professionnelle, spécialité Infographiste/Webdesigner à l'iut de Bobigny</span>
-                    </div>
+            <div class="intro-text">
+                <div class="intro-lead-in">Je m'appelle Benoît</div>
+                <div class="cd-headline slide">
+                        <span>je suis</span>
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">graphiste web</b>
+                            <!--<b>créatif</b>!-->
+                            <b>webdesigner</b>
+                            <b>graphiste print</b>
+                        </span>
                 </div>
+                <!-- /animation texte -->
+                <div class="intro-lead-in">et je vous invite à découvrir mes créations.</div>
+                <a href="#team" class="page-scroll btn btn-xl wow pulse animated data-wow-delay="200ms" data-wow-iteration="infinite" data-wow-duration="2s""><i class="fa fa-angle-down fa-4x"></i></a>
             </div>
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <!-- Qui suis je Section -->
+    <section id="team" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Créations</h2>
-                    <hr class="star-primary">
+                    <h2 class="section-heading">Qui suis-je ?</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/affiche.png" class="img-responsive" alt="">
-                    </a>
+                <!--<div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/4.jpg" class="img-responsive img-circle wow slideInLeft animated " alt="">
+                    </div>
+                </div>!-->
+                <div class="col-md-4 col-sm-6 team-item wow zoomIn animated">
+                        <img src="img/team/benoit.jpg" class="img-responsive" alt="">
+                    <div class="team-caption">
+                        <h4>Benoît Bouchère</h4>
+                        <p class="text-muted">Graphiste Print, Graphiste Web, Webdesigner</p>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/ville2.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/twitter2.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/nabalsy2.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/site2.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/maquette2.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/mockup journal.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/mmilab_facebook.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/logo_mmilab.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>À propos de moi</h2>
-                    <hr class="star-light">
+                <div class="col-sm-8">
+                    <div class="section-subheading wow fadeInUp animated">
+                        <p class="text-muted ">Je m'appelle Benoît, je suis un jeune étudiant de 21 ans passionné par le graphisme et le webdesign. 
+                        Après un baccalauréat technique je me suis dirigé vers un cursus dans le multimédia. J'ai suivi une année de Licence Mathématiques et Informatique, puis deux années de DUT Métiers du Multimédia et de l'Internet(MMI) à l'université Paris-Est.</p>
+
+                        <p class="text-muted">Actuellement en Licence professionnelle spécialité Infographiste/webdesigner, <span>je suis à la recherche d'un stage en tant que graphiste print/web ou webdesigner</span> afin de compléter cette année et enrichir mes compétences.</p>
+
+                        <p class="text-muted">Durant ces années, j'ai développé une culture artistique, un sens du détail, de la rigueur et surtout une grande passion pour la création graphique ainsi que le webdesign. Vous pouvez télécharger mon cv en cliquant sur le lien ci-dessous.</p>
+
+                       <p class="text-muted"> Vous pouvez télécharger mon cv en cliquant sur le lien ci-dessous.</p>
+
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Je m'appelle Benoît, je suis un jeune étudiant de 21 ans passionné par le graphisme. Je suis actuellement en Licence professionnelle, spécialité Infographiste / Webdesigner à l'iut de Bobigny (93).</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>J'ai acquis de nombreuses compétences en matière de communication et de web design grâce à ce DUT. Maîtrisant les logiciels tels que : Photoshop, Illustrator, Indesign mais aussi les logiciels de montage comme After Effect et Premiere. </p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="img/CV3.pdf" class="btn btn-lg btn-outline" target="blank">
+                <div class="col-sm-8">
+                    <div class="team-member wow fadeInUp animated" style="text-align:center;">
+                        <a href="img/CV3.pdf" class="btn btn-lg btn-outline btn-4" target="blank">
                         <i class="fa fa-download"></i> Télécharger mon CV
                     </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <!-- <section id="contact">
+    <!-- Mon parcours Section -->
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contactez moi</h2>
-                    <hr class="star-primary">
+                    <h2 class="section-heading2">Mon parcours</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2"> -->
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <!-- <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image wow bounceInLeft animated " >
+                                <img class=" img-circle img-responsive" src="img/about/icon-1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel wow bounceInLeft animated ">
+                                <div class="timeline-heading">
+                                    <h2 style='font-family: "Kaushan Script";'>2012</h2>
+                                    <h3 class="subheading">Bac STI <br>Génie Mécanique</h3>
+                                </div>
+                                <!--<div class="timeline-body">
+                                    <p class="text-muted2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>!-->
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image wow bounceInRight animated ">
+                                <img class="img-circle img-responsive" src="img/about/icon-2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel wow bounceInRight animated">
+                                <div class="timeline-heading">
+                                    <h2 style='font-family: "Kaushan Script";'>2012 - 2013</h2>
+                                    <h3 class="subheading">Licence 1 <br>Maths, Informatique</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image wow bounceInLeft animated">
+                                <img class="img-circle img-responsive" src="img/about/icon-3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel wow bounceInLeft animated">
+                                <div class="timeline-heading">
+                                    <h2 style='font-family: "Kaushan Script";'>2013 - 2015</h2>
+                                    <h3 class="subheading">DUT Métiers du Multimédia <br>et de l'Internet (ex SRC)</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image wow bounceInRight animated">
+                                <img class="img-circle img-responsive" src="img/about/icon-4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel wow bounceInRight animated">
+                                <div class="timeline-heading">
+                                    <h2 style='font-family: "Kaushan Script";'>2015 - 2016</h2>
+                                    <h3 class="subheading">Licence Professionnel<br> Infographiste, Webdesigner</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <!--<li class="timeline-inverted">
+                            <div class="timeline-image wow bounceInUp animated">
+                                <h4>Écrivez
+                                    <br>mon
+                                    <br>histoire !</h4>
+                            </div>
+                        </li>!-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mes competences Section 
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading"> Mes Compétences</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-12">
+                    <div class="col-md-4 wow zoomIn animated">
+                        <div class="c100 p60 ">
+                            <span>60%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
                             </div>
                         </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
+                        <h4 class="service-heading">Indesign</h4>
+                    </div>
+                    <div class="col-md-4 wow zoomIn animated">
+                        <div class="c100 p80 ">
+                            <span>80%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
                             </div>
                         </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="N° téléphone" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                <p class="help-block text-danger"></p>
+                        <h4 class="service-heading">Photoshop</h4>
+                    </div>
+                    <div class="col-md-4 wow zoomIn animated">
+                            <div class="c100 p70 ">
+                            <span>70%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
                             </div>
                         </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
+                        <h4 class="service-heading">Illustrator</h4>
+                    </div>
+                    <div class="col-md-4 wow zoomIn animated">
+                        <div class="c100 p40 ">
+                            <span>40%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
                             </div>
                         </div>
-                        <br>
-                        <div id="success"></div>
+                        <h4 class="service-heading">After Effect</h4>
+                    </div>
+                    <div class="col-md-4 wow zoomIn animated">
+                        <div class="c100 p50 ">
+                            <span>50%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <h4 class="service-heading">Premiere Pro</h4>
+                    </div>
+                    <div class="col-md-4 wow zoomIn animated">
+                            <div class="c100 p65 ">
+                            <span>65%</span>
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <h4 class="service-heading">HTML-CSS</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">MES CRÉATIONS</h2>
+                    <h3 class="section-subheading text-muted">Voici un aperçu de mes créations les plus représentatives de mon travail</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/boite-a-chaussure.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Diamant Blanc</h4>
+                        <p class="text-muted">Packaging</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/affiche-mmi.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Affiche MMI</h4>
+                        <p class="text-muted">Graphisme Print</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/ironman.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>IRON MAN</h4>
+                        <p class="text-muted">Illustration vectoriel</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/Front-Cover.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Programme culturel</h4>
+                        <p class="text-muted">Graphisme print</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/dali-journal.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>"Dali fait le mur"</h4>
+                        <p class="text-muted">Graphisme Print</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/medith.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>MEDITH</h4>
+                        <p class="text-muted">Logotype</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item wow zoomIn animated">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-expand fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/noon-nabalsy.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Noon Nabalsy</h4>
+                        <p class="text-muted">Webdesign</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact sans formulaire Section -->
+    <section id="contact2" class="bg-blue">
+        <div class="container" >
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contactez-moi !</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-6 ">
+                        <p class="text-muted ">Pour me contacter, envoyez moi un mail à l'adresse suivante;
+                        </p>
+                        <ul class="list-inline quicklinks hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5 wow bounceInLeft animated">
+                            <li><i class="hi-icon fa fa-envelope"><a href="mailto:benoit.bouchere@gmail.com"></i>benoit.bouchere@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>  
+                    <div class="col-md-4">
+                        <p class="text-muted ">ou par l'intermédiare de mes réseaux sociaux: 
+                        </p>
+                    <ul class="list-inline social-buttons hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5 wow bounceInRight animated">
+                        <li><a href="https://www.facebook.com/benoit.bouchere" target="_blank"><i class="hi-icon fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/BenoitBche" target="_blank"><i class="hi-icon fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="http://fr.linkedin.com/in/benoitbouchere/" target="_blank"><i class="hi-icon fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="https://www.google.com/+Beno%C3%AEtBouch%C3%A8re1" target="_blank"><i class="hi-icon fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section 
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading2">Contact</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Votre nom *" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Votre email *" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Votre téléphone *" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Votre message *" id="message" required data-validation-required-message="Veuillez entrer votre message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-7 btn-7b icon-envelope">Envoyer</button>
+                                <button type="submit" class="btn btn-xl">Envoyer</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>!-->  
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Adresse</h3>
-                        <p>23 avenue de la Convention<br>93000 Bobigny</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Réseaux sociaux</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/benoit.bouchere" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.google.com/+Beno%C3%AEtBouch%C3%A8re1" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/BenoitBche" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href=" http://fr.linkedin.com/in/benoitbouchere/" class="btn-social btn-outline" target="blank"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <!-- <h3>Contact</h3> -->
-                        <a class="btn-social btn-outline"><i class="fa fa-phone"></i></a><p>06 43 03 91 82</p>
-                        <a class="btn-social btn-outline"><i class="fa fa-envelope-o"></i></a><p>benoit.bouchere@gmail.com</p>
+    <!-- Mentions légales section -->
+    <section id="mention" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Mentions légales</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-subheading wow fadeInUp animated">
+                        <p class="text-muted ">Tous les éléments contenus dans ce site sont la propriété de Benoît Bouchère, sauf mention contraire.</p>
+
+                        <p class="text-muted">Le Code de la propriété intellectuelle n'autorisant, aux termes des paragraphes 2 et 3 de l'article L. 122-5, d'une part, que les "(…) copies et reproductions strictement réservées à l'usage privé du copiste et non destinées à une utilisation collective", et d'autre part, sous réserve du nom de l'auteur et de la source, que" (…) les analyses et les courtes citations justifiées par le caractère critique, polémique, pédagogique, scientifique ou d'information", toute représentation ou reproduction totale ou partielle des textes, photos et visuels contenus sur benoitbouchere.com faite sans le consentement de leur auteur ou de ses ayants droit ou de ses ayants cause, est illicite (article L. 122-4). Ces représentations ou reproductions, par quelque procédé que ce soit, et notamment sur un autre site Internet (Gubler. TGI, Paris, ord, référé du 14 août 1996), constituerait donc une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle pour les infractions commises en France et par les Conventions de l'OMPI du 20 décembre 1996 pour les infractions commises dans un autre État.</p>
+
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Benoît Bouchère 2014
-                    </div>
+    </section>
+
+    <footer>
+        <div class="container" class="bg-light-gray">
+            <div class="row">
+                <!--<div class="col-md-4">
+                    <ul class="list-inline quicklinks hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5">
+                        <li><i class="hi-icon fa fa-envelope"><a href="mailto:benoit.bouchere@gmail.com"></i>benoit.bouchere@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>!-->
+                <div class="col-md-6">
+                    <!--<ul class="list-inline social-buttons hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5">
+                        <li><a href="https://www.facebook.com/benoit.bouchere" target="_blank"><i class="hi-icon fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/BenoitBche" target="_blank"><i class="hi-icon fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="http://fr.linkedin.com/in/benoitbouchere/" target="_blank"><i class="hi-icon fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="https://www.google.com/+Beno%C3%AEtBouch%C3%A8re1" target="_blank"><i class="hi-icon fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>!-->
+                    <span class="copyright" style="color:#fff; font-size:20px;">Copyright &copy; Benoît 2015</span>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline quicklinks hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5">
+                        <li><i class="hi-icon fa fa-map-marker"><a href="https://www.google.fr/maps/place/Paris/@48.8746467,2.3564814,12z/data=!4m2!3m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460" target="_blank"></i>Paris </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
     <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -352,31 +588,25 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
+                            <!-- Project Details Go Here -->
                             <h2>Affiche MMI</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/affiche.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'une affiche présentant la formation MMI de Meaux.</p>
-                            <ul class="list-inline item-details">
-                                <li>Logiciel utilisé:
-                                    <strong><p>InDesign<p>
-                                    </strong>
-                                </li>
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li> -->
-                                <!-- <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
+                            <p class="item-intro text-muted">Affiche pour le DUT MMI de Meaux</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/affiche-mmi-preview.jpg" alt="">
+                            <p>Réalisation d'une affiche présentant les domaines que propose le DUT MMI de Meaux. Création de cette affiche dans le cadre des journées portes ouvertes de l'iut de Meaux. </p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Janvier 2015</b></li>
+                                <li>Client: <b>DUT MMI</b></li>
+                                <li>Catégorie: <b>Graphisme Print</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 2 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -389,31 +619,24 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Ville idéale</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/ville.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'une image représentant une ville idéale.</p>
-                            <ul class="list-inline item-details">
-                                <li>Logiciel utilisé:
-                                    <strong><p>Photoshop<p>
-                                    </strong>
-                                </li>
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
+                            <h2>IRONMAN</h2>
+                            <p class="item-intro text-muted">Illustration en hommage à la police "stark"</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/ironman-preview.jpg" alt="">
+                            <p>Réalisation d'une illustration sous Illustrator pour rendre hommage à la police de caractère "Stark" utilisée sur cette illustration. </p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Octobre 2015</b></li>
+                                <li>Client: <b>Licence IW</b></li>
+                                <li>Catégorie: <b>Illustration vectoriel</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 3 -->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -426,31 +649,25 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Bannière mmilab</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/bannière.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'une bannière pour le compte Twitter de mon projet tuteuré <a href="http://mmilab.com" target="blank">mmilab.com</a></p>
-                            <ul class="list-inline item-details">
-                                <li>Logiciel utilisé:
-                                    <strong><p>Photoshop<p>
-                                    </strong>
-                                </li>
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
-                            </ul> 
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <!-- Project Details Go Here -->
+                            <h2>Noon Nabalsy Paris</h2>
+                            <p class="item-intro text-muted">Webdesign pour l'entreprise Noon Nabalsy Paris</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/noon-nabalsy-preview.jpg" alt="">
+                            <p>Réalisation d'une maquette pour le site de cosmétique Noon Nabalsy Paris.</p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Octobre 2014</b></li>
+                                <li>Client: <b>DUT MMI</b></li>
+                                <li>Catégorie: <b>Webdesign</b></li>
+                            </ul>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 4 -->
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -463,31 +680,25 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Maquette site NABALSY</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/nabalsy.jpg" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'une maquette pour le site de cosmétique <a href="http://www.nabalsy.com" target="blank">Noon Nabalsy Paris</a>.</p>
-                            <ul class="list-inline item-details">
-                                <li>Logiciel utilisé:
-                                    <strong><p>Photoshop<p>
-                                    </strong>
-                                </li> 
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
+                            <!-- Project Details Go Here -->
+                            <h2>"Dali fait le mur"</h2>
+                            <p class="item-intro text-muted">Page de journal réalisé lors d'un projet journalistique pendant mon DUT MMI</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/dali-journal-preview.jpg" alt="">
+                            <p>Réalisation et mise en page d'un article journalistique à propos de l'exposition "Dali fait le mur".</p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Décembre 2014</b></li>
+                                <li>Client: <b>DUT MMI</b></li>
+                                <li>Catégorie: <b>Graphisme Print</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 5 -->
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -500,31 +711,25 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Site BOUCHERE TELECOM</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/btimac.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'un site internet en responsive-design avec le framework Foundation.</p>
-                            <ul class="list-inline item-details">
-                                <li>Site:
-                                    <strong><a href="http://vnctaing.github.io/bouchere-telecom/" target="blank">Bouchere Telecom</a>
-                                    </strong>
-                                </li>
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
+                            <!-- Project Details Go Here -->
+                            <h2>MEDITH</h2>
+                            <p class="item-intro text-muted">Logotype du label de musique indépendnt MEDITH</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/medith.jpg" alt="">
+                            <p>Logotype réalisé dans la cadre de mon projet tutoré pour le Label de musique Medith. </p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Janvier 2016</b></li>
+                                <li>Client: <b>Label MEDITH</b></li>
+                                <li>Catégorie: <b>Logotype</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 6 -->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -537,30 +742,30 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Maquette site mmilab</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/mmilab.png" class="img-responsive img-centered" alt="">
-                            <p>Réalistaion de la maquette du nouveau blog des créations des étudiants de mmi Meaux dans le cadre de mon projet tuteuré.</p>
-                            <ul class="list-inline item-details">
-                                <li>Site:
-                                    <strong><a href="http://mmilab.com" target="blank">mmilab.com</a>
-                                    </strong>
-                                </li>
-                                <li>Logiciels utilisés:
-                                    <p>Photoshop ,Illustrator<p>
-                                </li>
-                                <!-- <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> --> 
+                            <!-- Project Details Go Here -->
+                            <h2>Programme culturel</h2>
+                            <p class="item-intro text-muted">création du programme culturel de Margny les Compiègnes</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/Front-Cover.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/Stack.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/Perspective-Spread.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/Spread.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/Stack2.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/Back-Cover.jpg" alt="">
+                            <p>Programme culturel de Margny les Compiègne réalisé dans le cadre du projet print.</p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Janvier 2016</b></li>
+                                <li>Client: <b>Service culturel de Margny les Compiègne</b></li>
+                                <li>Catégorie: <b>Graphisme print</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Portfolio Modal 7 -->
     <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -573,97 +778,25 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Projet journalistique: "Dali fait le mur"</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/Journal.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation et mise en page d'un article journalistique à propos de l'exposition "Dali fait le mur".</p>
-                            <ul class="list-inline item-details">
-                                 <li>Logiciel utilisé:
-                                    <strong><p>InDesign<p>
-                                    </strong>
-                                </li> 
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li> -->
-                                <!-- <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
+                            <!-- Project Details Go Here -->
+                            <h2>Diamant Blanc</h2>
+                            <p class="item-intro text-muted">Création de packaging pour la marque Lacoste.</p>
+                            <img class="img-responsive img-centered" src="img/portfolio/boite-a-chaussure-preview.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/sac-preview.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/carte-cadeau-preview.jpg" alt="">
+                            <img class="img-responsive img-centered" src="img/portfolio/concept-board-preview.jpg" alt="">
+                            <p>Dans le cadre du cour de packaging nous devions travailler sur une enseigne de vêtement de notre choix.
+                            Pour celle-ci, nous devions imaginer une ligne, une collection pour une saison.
+                            Ensuite nous devions créer le logo de cette collection qui accompagnera la marque que nous avons choisi,
+                            et l'agrémenter d'un univers visuel.
+                            Concrètement, nous devions realiser un sac papier, une boite à chaussure et une
+                            carte cadeaux pour une marque de notre choix.</p>
+                            <ul class="list-inline">
+                                <li>Date: <b>Février 2016</b></li>
+                                <li>Client: <b>Licence IW</b></li>
+                                <li>Catégorie: <b>Packaging</b></li>
                             </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Réseaux sociaux: mmilab.com</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/bannière-Twitter.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'une bannière pour les réseaux sociaux du blog mmilab.com.</p>
-                            <ul class="list-inline item-details">
-                                 <li>Logiciel utilisé:
-                                    <strong><p>Illustrator<p>
-                                    </strong>
-                                </li> 
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li> -->
-                                <!-- <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Logo mmilab.com</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/logo-mmilab-twitter.png" class="img-responsive img-centered" alt="">
-                            <p>Réalisation d'un logo pour le blog mmilab.com.</p>
-                            <ul class="list-inline item-details">
-                                 <li>Logiciel utilisé:
-                                    <strong><p>Illustrator<p>
-                                    </strong>
-                                </li> 
-                                <!-- <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li> -->
-                                <!-- <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li> -->
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn1 btn-4 btn-4d fa fa-arrow-left" data-dismiss="modal"><span style="font-family: 'Kaushan Script'; font-size: 18px;">Retour</span></button>
                         </div>
                     </div>
                 </div>
@@ -673,6 +806,8 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -686,8 +821,24 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
+    <!-- Animation skills -->
+    <script src="/js/jquery.easypiechart.js"></script>
+
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="js/agency.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <!-- Animation js avec wow.js !-->
+    <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+ 
+
+
+
 
 </body>
 

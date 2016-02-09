@@ -1,3 +1,5 @@
+// Bootstrap Button Variant
+
 .button-variant(@color; @background; @border) {
 	color: @color;
 	background-color: @background;
@@ -34,4 +36,67 @@
 		color: @background;
 		background-color: @color;
 	}
+}
+
+// Background Features
+
+.background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+// Font Selections
+
+.serif-font() {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.script-font() {
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+.body-font() {
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.heading-font() {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+// mixins
+.rotate(@rotation) {
+    -webkit-transform: rotate(@rotation);
+    -moz-transform: rotate(@rotation);
+    -ms-transform: rotate(@rotation);
+    -o-transform: rotate(@rotation);
+    transform: rotate(@rotation);
+}
+
+.box-sizing(@box-sizing) {
+    -webkit-box-sizing: @box-sizing;
+    -moz-box-sizing: @box-sizing;
+    box-sizing: @box-sizing;
+}
+.transition-property(@transition) {
+    -webkit-transition-property: @transition;
+    -moz-transition-property: @transition;
+    -o-transition-property: @transition;
+    transition-property: @transition;
+}
+
+.transition-duration(@duration) {
+    -webkit-transition-duration: @duration;
+    -moz-transition-duration: @duration;
+    -o-transition-duration: @duration;
+    transition-duration: @duration;
+}
+
+.transition-timing-function(@timing){
+    -webkit-transition-timing-function: @timing;
+    -moz-transition-timing-function: @timing;
+    -o-transition-timing-function: @timing;
+    transition-timing-function: @timing;
 }
